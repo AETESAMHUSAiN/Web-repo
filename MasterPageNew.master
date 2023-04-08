@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageNew.master.cs" Inherits="MasterPageNew" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+
+        .style1
+        {
+            width: 189px;
+        }
+        .style2
+        {
+            width: 1100px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+                <table width=1500px align="center" style="border: medium double #800000" >
+                    <tr>
+                        <td class="style1">
+                            &nbsp;<img src="LOGO.jpeg" s&nbsp;<img src="LOGO.jpeg" 
+                                style="height: 151px; width: 192px; margin-left: 0px; margin-top: 0px;" /></td>
+                        <td align="center" class="style2" 
+                        
+                        
+                        
+                        style="font-family: 'Bell MT'; font-size: xx-large; font-weight: bolder; color: #000000; background-color: #A9A9A9; border: medium double #800000">
+                            BRANDZONE MENS WEAR
+                            <BR>
+                            <h3 style="color: #000000; font-size: 21px; font-family: 'Bodoni MT';">
+                                OPENING TIME 9 AM TO 9 PM</h3>
+                        </td>
+                        <td>
+                            <img src="LOGO.jpeg" style="height: 172px; width: 186px; margin-left: 0px" />
+                        </td>
+                    </tr>
+                </table>
+            </asp:ContentPlaceHolder>
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    &nbsp;&nbsp;&nbsp;
+    <asp:Menu ID="Menu1" runat="server" Font-Bold="True" ForeColor="Black" 
+        Orientation="Horizontal" Width="1550px" RenderingMode="Table">
+        <Items>
+            <asp:MenuItem Text="MANAGE PRODUCTS" Value="PRODUCTS" 
+                NavigateUrl="~/Products.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="VIEW REGISTRATION" Value="VIEW REGISTRATION" 
+                NavigateUrl="~/ViewRegistration.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="VIEW FEEDBACK" Value="VIEW FEEDBACK" 
+                NavigateUrl="~/View Feedback.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="VIEW ORDER" Value="VIEW ORDER"></asp:MenuItem>
+            <asp:MenuItem Text="LOGOUT" Value="LOGOUT"></asp:MenuItem>
+        </Items>
+        <StaticMenuItemStyle BackColor="#BDBDBD" BorderStyle="Groove" BorderWidth="1px" 
+            ForeColor="Black" HorizontalPadding="65px" VerticalPadding="16px" />
+    </asp:Menu>
+     <div style="border: medium double #800000; width: 1500px; height: 950px; margin:0 auto; overflow: auto">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+     <div style="background-color: #E5E4E2; width: 1500px; color: #000000; margin:0 auto; border: medium double #800000; height: 130px">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder4" runat="server">
+        
+            <p style="padding: 10px; height: 18px; width: 1469px;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FOLLOW US ON&nbsp;:&nbsp;#BRANDZONEMENSWEAR</p>
+            <img src="facebook.png" 
+                style="padding: 15px; height: 38px; width: 39px; margin-top: 0px;" 
+                align="left" />
+            <img src="twitter.png" style="padding: 15px; height: 37px; width: 39px" 
+                align="left" />&nbsp;
+          <a href="http://www.instagram.com">  <img src="insta.png" style="padding: 15px; height: 36px; width: 36px" 
+                align="left" /></a>
+            
+        </asp:ContentPlaceHolder>
+    </div>
+
+    </form>
+</body>
+</html>

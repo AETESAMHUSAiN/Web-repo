@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 189px;
+        }
+        .style2
+        {
+            width: 1100px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            <table width=1500px align="center" style="border: medium double #800000" >
+                <tr>
+                    <td class="style1">
+                        <img src="LOGO.jpeg" style="height: 157px; width: 187px" />
+                    </td>
+                    <td align="center" class="style2" 
+                        
+                        
+                        
+                        style="font-family: 'Bell MT'; font-size: xx-large; font-weight: bolder; color: #000000; background-color: #A9A9A9; border: medium double #800000">
+                        BRANDZONE MENS WEAR
+                        <BR>
+                        <h3 style="color: #000000; font-size: 21px; font-family: 'Bodoni MT';">
+                            OPENING TIME 9 AM TO 9 PM</h3>
+                    </td>
+                    <td>
+                        <img src="LOGO.jpeg" style="height: 156px; width: 186px; margin-left: 0px" />
+                    </td>
+                </tr>
+            </table>
+
+        </asp:ContentPlaceHolder>
+    </div>
+     <div style="margin:0px 0px; padding:0px 0px" >
+            <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+            <asp:Menu ID="Menu3" runat="server" Orientation="Horizontal" 
+                RenderingMode="Table" width=1500px onmenuitemclick="Menu3_MenuItemClick1">
+                <DynamicHoverStyle BackColor="#CCCCCC" ForeColor="Black" />
+                <DynamicMenuItemStyle BackColor="#999999" ForeColor="White" 
+                    HorizontalPadding="100px" VerticalPadding="12px" Font-Bold="True" />
+                <DynamicMenuStyle BackColor="Silver" />
+                <Items>
+                    <asp:MenuItem Text="HOME     " Value="HOME" NavigateUrl="~/Home.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="ABOUT US" Value="ABOUT US" NavigateUrl="~/About Us.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="PRODUCT'S" Value="CATEGORIES" 
+                        NavigateUrl="~/AllProduct.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="CONTACT US" Value="CONTACT US" NavigateUrl="~/Contact.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="          LOGIN" Value="MY ORDER" 
+                        NavigateUrl="~/LOGIN.aspx"></asp:MenuItem>
+                </Items>
+                <StaticHoverStyle BackColor="Silver" ForeColor="White" />
+                <StaticMenuItemStyle BackColor="#BDBDBD" Font-Bold="True" Font-Size="Large" 
+                    ForeColor="Black" HorizontalPadding="100px" VerticalPadding="12px" BorderStyle="Groove" BorderWidth="1 px" />
+            </asp:Menu>
+        
+        </asp:ContentPlaceHolder>
+    </div>
+     <div style="border: medium double #800000; width: 1500px; height: 950px; margin:0 auto; overflow: auto">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+     <div style="background-color: #E5E4E2; width: 1500px; color: #000000; margin:0 auto; border: medium double #800000; height: 130px">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder4" runat="server">
+        
+            <p style="padding: 10px; height: 18px; width: 1469px;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FOLLOW US ON&nbsp;:&nbsp;#BRANDZONEMENSWEAR</p>
+            <img src="facebook.png" 
+                style="padding: 15px; height: 38px; width: 39px; margin-top: 0px;" 
+                align="left" />
+            <img src="twitter.png" style="padding: 15px; height: 37px; width: 39px" 
+                align="left" />&nbsp;
+            <img src="insta.png" style="padding: 15px; height: 36px; width: 36px" 
+                align="left" />
+            
+        </asp:ContentPlaceHolder>
+    </div>
+
+    </form>
+</body>
+</html>
